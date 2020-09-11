@@ -355,15 +355,15 @@ end
 AddEventHandler('program-casino:hasEnteredMarker', function(zone)
 	if zone =='CasinoActions' then
 		CurrentAction     = 'casino_mgmt'
-		CurrentActionMsg  = "~r~[E] ~b~Otworz menu zarządzania kasynem"
+		CurrentActionMsg  = "~r~[E] ~b~Open het casinobeheermenu"
 		CurrentActionData = {}
 	elseif zone == "CasinoCloak" then
 		CurrentAction     = 'CasinoCloak'
-		CurrentActionMsg  = "~r~[E] ~p~Przebieralnia Kasyna"
+		CurrentActionMsg  = "~r~[E] ~p~Casino kleedkamer"
 		CurrentActionData = {}
 	elseif zone == "CasinoFridge" then
 		CurrentAction     = 'CasinoFridge'
-		CurrentActionMsg  = "~r~[E] ~p~Lodówka"
+		CurrentActionMsg  = "~r~[E] ~p~Frigo"
 		CurrentActionData = {}
 	elseif zone == "CasinoBar" then
 		CurrentAction     = 'CasinoBar'
