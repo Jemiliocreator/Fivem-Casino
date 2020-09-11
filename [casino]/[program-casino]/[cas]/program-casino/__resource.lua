@@ -15,6 +15,10 @@ server_scripts {
     'server/functions.lua',
 }
 
+files {
+    'locales/pl.lua',
+}
+
 dependencies {
 	'es_extended'
 }

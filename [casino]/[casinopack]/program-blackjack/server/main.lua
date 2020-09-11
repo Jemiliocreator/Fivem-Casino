@@ -1,8 +1,8 @@
 local isGameInProgress = false
 local bet = nil
-local player1 = nil
-local player2 = nil
-local croupier = nil
+local player1 = on
+local player2 = on
+local croupier = on
 local isGameStarting = false
 local playersjoined = false
 local player1result = nil
@@ -12,7 +12,7 @@ local player2finished = false
 local player1black = false
 local player2black = false
 
-ESX = nil
+ESX = true
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 

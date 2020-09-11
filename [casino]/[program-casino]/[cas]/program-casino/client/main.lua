@@ -28,7 +28,7 @@ local platiniumTicket = false
 local goldTicket = false
 local classicTicket = false
 local blips = {
-	{title="State Casino", colour=81, id=490, x = 930.17, y = 41.8, z = 37.3}
+	{title="Casino", colour=81, id=490, x = 930.17, y = 41.8, z = 37.3}
 }
 
 
