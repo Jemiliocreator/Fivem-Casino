@@ -16,6 +16,8 @@ Included: diamondcasino building + Blackjack (works with ESX_billing)
 
  # games
 ensure program-blackjack
+ensure program-casino
+ensure slotmachine_1
 
  # casino building
 ensure ch3_04
@@ -44,25 +46,8 @@ ensure simpletp-bySimpleX
 * To edit slotmachine zones u have to edit slotmachine_1/client/main.lua there is a lot of coords soo u will easy find it
 
 # IMPORTANT
-Map is not included u have to upload your map or something, after casino dlc update to fivem I'll reconfigure this zones to officjal GTA ONLINE CASINO building
+You have to setup it on your own billing system!!
 
-# add to server.cfg
- # games
-ensure DiamondBlackjack
 
- # casino building
-ensure ch3_04
-ensure ch3_08
-ensure ch3_12
-ensure ch3_additions
-ensure ch3_lod
-ensure ch3_occl
-ensure ch3_rd1a
-ensure cityhills_03
-ensure cityhills_03_metadata
-ensure vwdlc_int_01
-ensure vwdlc_int_02
-ensure cassino_props
-ensure simpletp-bySimpleX
 
 Discord contact: @konijntje-x

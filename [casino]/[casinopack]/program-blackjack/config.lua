@@ -1,6 +1,6 @@
 Config                            = {}
 
-Config.DrawDistance               = 3.0
+Config.DrawDistance               = 5.0
 Config.MarkerType                 = 1
 Config.MarkerSize                 = { x = 1.5, y = 1.5, z = 0.5 }
 Config.MarkerColor                = { r = 50, g = 50, b = 204 }
@@ -34,5 +34,5 @@ Config.JobBlip = {
 	display = 4,
 	scale = 1.2,
 	colour = 63,
-	name = 'State Casino'
+	name = 'Casino'
 }

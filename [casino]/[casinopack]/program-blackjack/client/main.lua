@@ -10,32 +10,32 @@ local Keys = {
     ["NENTER"] = 201, ["N4"] = 108, ["N5"] = 60, ["N6"] = 107, ["N+"] = 96, ["N-"] = 97, ["N7"] = 117, ["N8"] = 61, ["N9"] = 118
 }
 local cards = {
-	{'As Kier',11,'http://167.99.90.247/testowy/img/ace_of_hearts.png'},       	{'As Trefl',11,'http://167.99.90.247/testowy/img/ace_of_clubs.png'},
+	{'As Herz',11,'http://167.99.90.247/testowy/img/ace_of_hearts.png'},       	{'As Kreuz',11,'http://167.99.90.247/testowy/img/ace_of_clubs.png'},
 	{'As Karo',11,'http://167.99.90.247/testowy/img/ace_of_diamonds.png'},     	{'As Pik',11,'http://167.99.90.247/testowy/img/ace_of_spades.png'},
-	{'Walet Pik',10,'http://167.99.90.247/testowy/img/jack_of_spades.png'},     {'Dziesiątka Pik',10,'http://167.99.90.247/testowy/img/10_of_spades.png'},  
-	{'Dziewiątka Pik',9,'http://167.99.90.247/testowy/img/9_of_spades.png'},   	{'Ósemka Pik',8,'http://167.99.90.247/testowy/img/8_of_spades.png'},        
-	{'Siódemka Pik',7,'http://167.99.90.247/testowy/img/7_of_spades.png'},      {'Szóstka Pik',6,'http://167.99.90.247/testowy/img/6_of_spades.png'},
-	{'Piątka Pik',5,'http://167.99.90.247/testowy/img/5_of_spades.png'},      	{'Czwórka Pik',4,'http://167.99.90.247/testowy/img/4_of_spades.png'},     
-	{'Trójka Pik',3,'http://167.99.90.247/testowy/img/3_of_spades.png'},      	{'Dwójka Pik',2,'http://167.99.90.247/testowy/img/2_of_hearts.png'},      
-	{'Dama Kier',10,'http://167.99.90.247/testowy/img/queen_of_hearts.png'},    {'Walet Kier',10,'http://167.99.90.247/testowy/img/jack_of_hearts.png'},  
-	{'Dziewiątka Kier',9,'http://167.99.90.247/testowy/img/9_of_hearts.png'},  	{'Ósemka Kier',8,'http://167.99.90.247/testowy/img/8_of_hearts.png'},    
-	{'Siódemka Kier',7,'http://167.99.90.247/testowy/img/7_of_hearts.png'},    	{'Szóstka Kier',6,'http://167.99.90.247/testowy/img/6_of_hearts.png'},       
-	{'Piątka Kier',5,'http://167.99.90.247/testowy/img/5_of_hearts.png'},     	{'Czwórka Kier',4,'http://167.99.90.247/testowy/img/4_of_hearts.png'},        
-	{'Trójka Kier',3,'http://167.99.90.247/testowy/img/3_of_hearts.png'},     	{'Dwójka Kier',2,'http://167.99.90.247/testowy/img/2_of_hearts.png'},    
-	{'Król Karo',10,'http://167.99.90.247/testowy/img/king_of_diamonds.png'},   {'Dama Karo',10,'http://167.99.90.247/testowy/img/queen_of_diamonds.png'},       
-	{'Walet Karo',10,'http://167.99.90.247/testowy/img/jack_of_diamonds.png'},  {'Dziesiątka Karo',10,'http://167.99.90.247/testowy/img/10_of_diamonds.png'}, 
-	{'Dziewiątka Karo',9,'http://167.99.90.247/testowy/img/9_of_diamonds.png'}, {'Ósemka Karo',8,'http://167.99.90.247/testowy/img/8_of_diamonds.png'},     
-	{'Siódemka Karo',7,'http://167.99.90.247/testowy/img/7_of_diamonds.png'},   {'Szóstka Karo',6,'http://167.99.90.247/testowy/img/6_of_diamonds.png'},      
-	{'Czwórka Karo',4,'http://167.99.90.247/testowy/img/4_of_diamonds.png'},    {'Trójka Karo',3,'http://167.99.90.247/testowy/img/3_of_diamonds.png'},     
-	{'Dwójka Karo',2,'http://167.99.90.247/testowy/img/2_of_diamonds.png'},     {'Dama Pik',10,'http://167.99.90.247/testowy/img/queen_of_spades.png'}, 
-	{'Król Trefl',10,'http://167.99.90.247/testowy/img/king_of_clubs.png'},     {'Dama Trefl',10,'http://167.99.90.247/testowy/img/queen_of_clubs.png'},      
-	{'Walet Trefl',10,'http://167.99.90.247/testowy/img/jack_of_clubs.png'},    {'Dziesiątka Trefl',10,'http://167.99.90.247/testowy/img/10_of_clubs.png'},  
-	{'Ósemka Trefl',8,'http://167.99.90.247/testowy/img/8_of_clubs.png'},       {'Siódemka Trefl',7,'http://167.99.90.247/testowy/img/7_of_clubs.png'},   
-	{'Szóstka Trefl',6,'http://167.99.90.247/testowy/img/6_of_clubs.png'},    	{'Piątka Trefl',5,'http://167.99.90.247/testowy/img/5_of_clubs.png'},      
-	{'Czwórka Trefl',4,'http://167.99.90.247/testowy/img/4_of_clubs.png'},    	{'Trójka Trefl',3,'http://167.99.90.247/testowy/img/3_of_clubs.png'},       
-	{'Dwójka Trefl',2,'http://167.99.90.247/testowy/img/2_of_clubs.png'},       {'Dziesiątka Kier',10,'http://167.99.90.247/testowy/img/10_of_hearts.png'},    
-	{'Król Pik',10,'http://167.99.90.247/testowy/img/king_of_spades.png'},      {'Piątka Karo',5,'http://167.99.90.247/testowy/img/5_of_diamonds.png'},         
-	{'Dziewiątka Trefl',9,'http://167.99.90.247/testowy/img/9_of_clubs.png'}, 	{'Król Kier',10,'http://167.99.90.247/testowy/img/king_of_hearts.png'}
+	{'Bube Pik',10,'http://167.99.90.247/testowy/img/jack_of_spades.png'},      {'10 Pik',10,'http://167.99.90.247/testowy/img/10_of_spades.png'},  
+	{'Pik 9',9,'http://167.99.90.247/testowy/img/9_of_spades.png'},   	        {'8 Pik',8,'http://167.99.90.247/testowy/img/8_of_spades.png'},        
+	{'Pik 7',7,'http://167.99.90.247/testowy/img/7_of_spades.png'},             {'6 Pik',6,'http://167.99.90.247/testowy/img/6_of_spades.png'},
+	{'Pik 5',5,'http://167.99.90.247/testowy/img/5_of_spades.png'},      	    {'4 Pik',4,'http://167.99.90.247/testowy/img/4_of_spades.png'},     
+	{'Pik 3',3,'http://167.99.90.247/testowy/img/3_of_spades.png'},      	    {'2 Pik',2,'http://167.99.90.247/testowy/img/2_of_hearts.png'},      
+	{'Herz Dame',10,'http://167.99.90.247/testowy/img/queen_of_hearts.png'},    {'Herz Bube',10,'http://167.99.90.247/testowy/img/jack_of_hearts.png'},  
+	{'Herz 9',9,'http://167.99.90.247/testowy/img/9_of_hearts.png'},  	        {'Herz 8',8,'http://167.99.90.247/testowy/img/8_of_hearts.png'},    
+	{'Herz 7',7,'http://167.99.90.247/testowy/img/7_of_hearts.png'},    	    {'Herz 6',6,'http://167.99.90.247/testowy/img/6_of_hearts.png'},       
+	{'Herz 5',5,'http://167.99.90.247/testowy/img/5_of_hearts.png'},     	    {'Herz 4',4,'http://167.99.90.247/testowy/img/4_of_hearts.png'},        
+	{'Herz 3',3,'http://167.99.90.247/testowy/img/3_of_hearts.png'},     	    {'Herz 2',2,'http://167.99.90.247/testowy/img/2_of_hearts.png'},    
+	{'Karo König',10,'http://167.99.90.247/testowy/img/king_of_diamonds.png'},  {'Dame Karo',10,'http://167.99.90.247/testowy/img/queen_of_diamonds.png'},       
+	{'Karo Bube',10,'http://167.99.90.247/testowy/img/jack_of_diamonds.png'},   {'Karo 10',10,'http://167.99.90.247/testowy/img/10_of_diamonds.png'}, 
+	{'Karo 9',9,'http://167.99.90.247/testowy/img/9_of_diamonds.png'},          {'Karo 8',8,'http://167.99.90.247/testowy/img/8_of_diamonds.png'},     
+	{'Karo 7',7,'http://167.99.90.247/testowy/img/7_of_diamonds.png'},          {'Karo 6',6,'http://167.99.90.247/testowy/img/6_of_diamonds.png'},      
+	{'Karo 4',4,'http://167.99.90.247/testowy/img/4_of_diamonds.png'},          {'Karo 3',3,'http://167.99.90.247/testowy/img/3_of_diamonds.png'},     
+	{'Karo 2',2,'http://167.99.90.247/testowy/img/2_of_diamonds.png'},          {'Dame Pik',10,'http://167.99.90.247/testowy/img/queen_of_spades.png'}, 
+	{'Kreuz König',10,'http://167.99.90.247/testowy/img/king_of_clubs.png'},    {'Dame Kreuz',10,'http://167.99.90.247/testowy/img/queen_of_clubs.png'},      
+	{'Kreuz Bube',10,'http://167.99.90.247/testowy/img/jack_of_clubs.png'},     {'Kreuz 10',10,'http://167.99.90.247/testowy/img/10_of_clubs.png'},  
+	{'Kreuz 8',8,'http://167.99.90.247/testowy/img/8_of_clubs.png'},            {'Kreuz 7',7,'http://167.99.90.247/testowy/img/7_of_clubs.png'},   
+	{'Kreuz 6',6,'http://167.99.90.247/testowy/img/6_of_clubs.png'},    	    {'Kreuz 5',5,'http://167.99.90.247/testowy/img/5_of_clubs.png'},      
+	{'Kreuz 4',4,'http://167.99.90.247/testowy/img/4_of_clubs.png'},    	    {'Kreuz 3',3,'http://167.99.90.247/testowy/img/3_of_clubs.png'},       
+	{'Kreuz 2',2,'http://167.99.90.247/testowy/img/2_of_clubs.png'},            {'Herz 10',10,'http://167.99.90.247/testowy/img/10_of_hearts.png'},    
+	{'Pik König',10,'http://167.99.90.247/testowy/img/king_of_spades.png'},     {'Karo 5',5,'http://167.99.90.247/testowy/img/5_of_diamonds.png'},         
+	{'Kreuz 9',9,'http://167.99.90.247/testowy/img/9_of_clubs.png'}, 	        {'König Herz',10,'http://167.99.90.247/testowy/img/king_of_hearts.png'}
 }
 local PlayerData = {}
 local playerPed = PlayerPedId()
@@ -156,15 +156,15 @@ end)
 AddEventHandler('program-casino:hasEnteredMarker', function(zone)
 	if zone =='Croupier' then
 		CurrentAction     = 'Croupier'
-		CurrentActionMsg  = "~r~[E] ~b~Aby otworzyc stół BlackJack"
+		CurrentActionMsg  = "~r~[E] ~b~um den Blackjacktisch zu eröffnen"
 		CurrentActionData = {}
 	elseif zone == "Player1" then
 		CurrentAction     = 'Player1'
-		CurrentActionMsg  = "~r~[E] ~b~Aby dołączyć jako pierwszy gracz"
+		CurrentActionMsg  = "~r~[E] ~b~Um als erster Spieler beizutreten"
 		CurrentActionData = {}
 	elseif zone == "Player2" then
 		CurrentAction     = 'Player2'
-		CurrentActionMsg  = "~r~[E] ~b~Aby dołączyć jako drugi gracz"
+		CurrentActionMsg  = "~r~[E] ~b~Um als zweiter Spieler beizutreten"
 		CurrentActionData = {}
 	end
 end)
@@ -202,7 +202,7 @@ RegisterNetEvent('program-casino:notifyPlayers')
 AddEventHandler('program-casino:notifyPlayers', function(quantity)
 	local coords, letSleep = GetEntityCoords(PlayerPedId()), true
 	if GetDistanceBetweenCoords(coords, Config.BlackjackSites.Croupier.Pos.x, Config.BlackjackSites.Croupier.Pos.y, Config.BlackjackSites.Croupier.Pos.z, true) < 29 then
-		ESX.ShowAdvancedNotification("~p~BlackJack", "~p~Stawka: ~g~"..quantity.."$", "~p~Stół wystartował, pamiętaj że pierwszeństwo ma Golden/Platinium Ticket ", "CHAR_BANK_BOL", 9)
+		ESX.ShowAdvancedNotification("~p~BlackJack", "~p~Einsatz: ~g~"..quantity.."$", "~p~Der Tisch beginnt, denken Sie daran, dass das Golden / Platinium Ticket Vorrang hat! ", "CHAR_BANK_BOL", 9)
 	end
 	Citizen.Wait(5000)
 end)
@@ -230,8 +230,8 @@ AddEventHandler('program-blackjack:givecards', function()
 	end
 	local wynik = cards[card][2]
 	local finish = false
-	ESX.ShowNotification("~p~Dołączyłeś do stołu, Twoja Pierwsza karta to ~b~" ..cards[card][1].. " ~p~o wartosci ~b~"..cards[card][2].."~n~~b~" ..wynik.." ~p~pkt")
-	ESX.ShowNotification("~o~Aby dobrać Kartę kliknij ~r~ [F]~o~ Aby zaprzestać i wyłożyć karty kliknij ~r~[X]")
+	ESX.ShowNotification("~p~Sie haben sich an den Tisch gesetzt, Ihre erste Karte ist ~b~" ..cards[card][1].. " ~p~über den Wert ~b~"..cards[card][2].."~n~~b~" ..wynik.." ~p~Punkt")
+	ESX.ShowNotification("~o~Um eine Karte auszuwählen, klicken Sie auf ~r~ [F]~o~ drückem Sie zum Stoppen und Anzeigen von Karten auf ~r~[X]")
 	TriggerEvent("pNotify:SendNotification", {
 		text = "<font style='font-size: 14px'><div style='height: 150px; width: 100px; min-width: 100px; min-height: 150px; border-radius:10px; background-image: url("..cards[card][3].."); background-color:white; background-size: contain; background-position: center;  background-repeat: no-repeat;'></div>",
 		type = "cards",
@@ -254,15 +254,15 @@ AddEventHandler('program-blackjack:givecards', function()
 				timeout = 0,
 				layout = "bottomRight"
 			})
-			ESX.ShowNotification("~p~Dobrana karta to ~b~" ..cards[card][1].. " ~p~o wartosci ~b~"..cards[card][2].."~n~~p~Masz  ~b~" ..wynik.." ~p~pkt")
+			ESX.ShowNotification("~p~Die gewählte Karte ist ~b~" ..cards[card][1].. " ~p~über den Wert ~b~"..cards[card][2].."~n~~p~Sie haben  ~b~" ..wynik.." ~p~Punkt")
 			if wynik>21 then
 				if aces > 0 then
 					aces = aces-1
 					wynik = wynik - 10
-					ESX.ShowNotification("~p~Miales Asa dlatego nie przegrales tylko policzono ci 1 pkt z asa zamiast 11")
+					ESX.ShowNotification("~p~Sie hatten ein Ass, haben also nicht verloren, sondern nur 1 Punkt vom Ass statt 11 gezählt")
 				else
 					finish=true
-					ESX.ShowNotification("~p~Łącznie masz ponad 21 punktów, czyli ~b~" ..wynik.. "~p~, Przegrasz chyba że przeciwnik też przekroczył 21")
+					ESX.ShowNotification("~p~Sie haben insgesamt über 21 Punkte, d. H. ~b~" ..wynik.. "~p~, Sie verlieren, wenn Ihr Gegner nicht auch 21 überschritten hat")
 					aces = 0
 				end
 			end
@@ -302,7 +302,7 @@ function Croupier()
 				local quantity = tonumber(data2.value)
 
 				if quantity == nil or quantity < 1 then
-					ESX.ShowNotification("Błędna wartość")
+					ESX.ShowNotification("Ungültiger Wert")
 				else
 					menu.close()
 					TriggerServerEvent('program-blackjack:startTable', quantity)
@@ -324,9 +324,9 @@ function Croupier()
 			end
 		)
 	elseif PlayerData.job.name ~= 'casino' then
-		ESX.ShowNotification("Musisz być krupierem aby otworzyć stół")
+		ESX.ShowNotification("Sie müssen ein Mitarbeiter sein, um den Tisch zu eröffnen")
 	elseif gameInProgress == true and PlayerData.job.name == 'casino' then
-		ESX.ShowNotification("~b~Aktualnie trwa rozgrywka, aby rozpoczac nowa zakończ tą zdalnie ~r~[X]~b~ lub poczekaj do konca")
+		ESX.ShowNotification("~b~Derzeit läuft ein Spiel.. um ein neues zu starten beenden sie dieses mit ~r~[X]~b~ oder bis zum Ende warten..")
 	end
 	
 end
@@ -334,12 +334,12 @@ end
 function Player1()
 	ESX.TriggerServerCallback('program-blackjack:checkStarting', function(result)
 		if not result then
-			ESX.ShowNotification('~r~Stół nie wystartował, udaj się do krupiera aby poprosić o otwarcie stołu!')
+			ESX.ShowNotification('~r~Der Tisch wurde noch nicht eröffnet, wenden sie sich an einen Mitarbeiter!')
 		else
 			if isPlatinium then
 				local elements = {
-					{label = "Zagraj nieopodatkowaną",  value = 'black'},
-					{label = "Zagraj opodatkowaną",  value = 'money'}
+					{label = "Spielen Sie unversteuert",  value = 'black'},
+					{label = "Spiel versteuert",  value = 'money'}
 				}
 			
 				ESX.UI.Menu.CloseAll()
@@ -354,7 +354,7 @@ function Player1()
 					elseif data.current.value == 'black' then
 						ESX.TriggerServerCallback('program-blackjack:checkBlackMoney', function(result2)
 							if not result2 then
-								ESX.ShowNotification('~r~Nie masz wystarczająco pieniędzy aby dołączyć do stołu!')
+								ESX.ShowNotification('~r~Sie haben nicht genug Geld, um sich an den Tisch zu setzen!')
 							else
 								isP1playing = true
 								TriggerServerEvent('program-blackjack:p1black')
@@ -366,7 +366,7 @@ function Player1()
 					elseif data.current.value == 'money' then
 						ESX.TriggerServerCallback('program-blackjack:checkMoney', function(result2)
 							if not result2 then
-								ESX.ShowNotification('~r~Nie masz wystarczająco pieniędzy aby dołączyć do stołu!')
+								ESX.ShowNotification('~r~Sie haben nicht genug Geld, um sich an den Tisch zu setzen!')
 							else
 								isP1playing = true
 								TriggerServerEvent('program-blackjack:p1')
@@ -385,7 +385,7 @@ function Player1()
 			else
 				ESX.TriggerServerCallback('program-blackjack:checkMoney', function(result2)
 					if not result2 then
-						ESX.ShowNotification('~r~Nie masz wystarczająco pieniędzy aby dołączyć do stołu!')
+						ESX.ShowNotification('~r~Sie haben nicht genug Geld, um sich an den Tisch zu setzen!')
 					else
 						isP1playing = true
 						TriggerServerEvent('program-blackjack:p1')
@@ -399,7 +399,7 @@ end
 function Player2()
 	ESX.TriggerServerCallback('program-blackjack:checkStarting', function(result)
 		if not result then
-			ESX.ShowNotification('~r~Stół nie wystartował, udaj się do krupiera aby poprosić o otwarcie stołu!')
+			ESX.ShowNotification('~r~Der Tisch wurde noch nicht eröffnet, wenden sie sich an einen Mitarbeiter!')
 		else
 			if isPlatinium then
 				local elements = {
@@ -419,7 +419,7 @@ function Player2()
 					elseif data.current.value == 'black' then
 						ESX.TriggerServerCallback('program-blackjack:checkBlackMoney', function(result2)
 							if not result2 then
-								ESX.ShowNotification('~r~Nie masz wystarczająco pieniędzy aby dołączyć do stołu!')
+								ESX.ShowNotification('~r~Sie haben nicht genug Geld, um sich an den Tisch zu setzen!')
 							else
 								isP2playing = true
 								TriggerServerEvent('program-blackjack:p2black')
@@ -431,7 +431,7 @@ function Player2()
 					elseif data.current.value == 'money' then
 						ESX.TriggerServerCallback('program-blackjack:checkMoney', function(result2)
 							if not result2 then
-								ESX.ShowNotification('~r~Nie masz wystarczająco pieniędzy aby dołączyć do stołu!')
+								ESX.ShowNotification('~r~Sie haben nicht genug Geld, um sich an den Tisch zu setzen!')
 							else
 								isP2playing = true
 								TriggerServerEvent('program-blackjack:p2')
@@ -450,7 +450,7 @@ function Player2()
 			else
 				ESX.TriggerServerCallback('program-blackjack:checkMoney', function(result2)
 					if not result2 then
-						ESX.ShowNotification('~r~Nie masz wystarczająco pieniędzy aby dołączyć do stołu!')
+						ESX.ShowNotification('~r~Sie haben nicht genug Geld, um sich an den Tisch zu setzen!')
 					else
 						isP2playing = true
 						TriggerServerEvent('program-blackjack:p2')
