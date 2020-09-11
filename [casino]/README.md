@@ -1,8 +1,8 @@
-# Thanks for 's0ig', he have released slotmachine witch i edited to make this casino pack
 
-# program_casino_fivem
+
+# Casinoscript
 A pack of casino scripts in Lua lang for fivem
-Every money, this witch players win and lose is taking or giving to casino account, so there is perfect money circulation
+Included: diamondcasino building + Blackjack (works with ESX_billing)
 
 
 # Required
@@ -11,13 +11,30 @@ Every money, this witch players win and lose is taking or giving to casino accou
 * pNotify
 
 # Installation 
-1. Upload [cas] directory to resource directory
+1. Upload [casino] directory to resource directory
 1. Add to server.cfg 
-* >start program-casino
-* >start program-blackjack
-* >start slotmachine_1
+
+ # games
+ensure program-blackjack
+
+ # casino building
+ensure ch3_04
+ensure ch3_08
+ensure ch3_12
+ensure ch3_additions
+ensure ch3_lod
+ensure ch3_occl
+ensure ch3_rd1a
+ensure cityhills_03
+ensure cityhills_03_metadata
+ensure vwdlc_int_01
+ensure vwdlc_int_02
+ensure cassino_props
+ensure simpletp-bySimpleX
+
+
 3. Configure files, (section Configurate)
-4. Improt program-casino.sql to database
+4. Import program-casino.sql to database
 
 
 # Configurate
@@ -29,6 +46,23 @@ Every money, this witch players win and lose is taking or giving to casino accou
 # IMPORTANT
 Map is not included u have to upload your map or something, after casino dlc update to fivem I'll reconfigure this zones to officjal GTA ONLINE CASINO building
 
-Again thanks for s0ig
+# add to server.cfg
+ # games
+ensure DiamondBlackjack
 
-Every bugs pls report on forum in thread or there github/issues
+ # casino building
+ensure ch3_04
+ensure ch3_08
+ensure ch3_12
+ensure ch3_additions
+ensure ch3_lod
+ensure ch3_occl
+ensure ch3_rd1a
+ensure cityhills_03
+ensure cityhills_03_metadata
+ensure vwdlc_int_01
+ensure vwdlc_int_02
+ensure cassino_props
+ensure simpletp-bySimpleX
+
+Discord contact: @konijntje-x
