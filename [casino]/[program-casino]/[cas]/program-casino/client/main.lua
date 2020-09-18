@@ -230,7 +230,7 @@ Citizen.CreateThread(function ()
 									SetEntityHeading(player, loc2.heading)
 								else
 									menu.close()
-									ESX.ShowNotification('~r~Nie jesteś pracownikiem Kasyna')
+									ESX.ShowNotification('~r~U bent een werknemer van het casino')
 								end
 							end
 
@@ -265,7 +265,7 @@ Citizen.CreateThread(function ()
 										classicTicket = true
 										TriggerServerEvent('program-casino:removeMoney',Config.classicPrice)
 									else
-										ESX.ShowNotification('~r~Nie masz wysarczająco pieniędzy')
+										ESX.ShowNotification('~r~Je hebt niet genoeg geld!')
 									end
 								end)
 								menu.close()
@@ -279,7 +279,7 @@ Citizen.CreateThread(function ()
 										goldTicket = true
 										TriggerServerEvent('program-casino:removeMoney',Config.goldenPrice)
 									else
-										ESX.ShowNotification('~r~Nie masz wysarczająco pieniędzy')
+										ESX.ShowNotification('~r~Je hebt nieg genoeg geld!')
 									end
 								end)
 								wyzeruj()
@@ -293,7 +293,7 @@ Citizen.CreateThread(function ()
 										TriggerServerEvent('program-casino:removeMoney',Config.platiniumPrice)
 										TriggerServerEvent('program-casino:sendPlatinium')
 									else
-										ESX.ShowNotification('~r~Nie masz wysarczająco pieniędzy')
+										ESX.ShowNotification('~r~Je hebt niet genoeg geld!')
 									end
 								end)
 								wyzeruj()
@@ -304,7 +304,7 @@ Citizen.CreateThread(function ()
 									SetEntityHeading(player, loc2.heading)
 								else
 									menu.close()
-									ESX.ShowNotification('~r~Nie jesteś pracownikiem Kasyna')
+									ESX.ShowNotification('~r~U bent geen werknemer van het casino')
 								end
 								wyzeruj()
 							end
@@ -355,15 +355,15 @@ end
 AddEventHandler('program-casino:hasEnteredMarker', function(zone)
 	if zone =='CasinoActions' then
 		CurrentAction     = 'casino_mgmt'
-		CurrentActionMsg  = "~r~[E] ~b~Otworz menu zarządzania kasynem"
+		CurrentActionMsg  = "~r~[E] ~b~Open het casinobeheer menu"
 		CurrentActionData = {}
 	elseif zone == "CasinoCloak" then
 		CurrentAction     = 'CasinoCloak'
-		CurrentActionMsg  = "~r~[E] ~p~Przebieralnia Kasyna"
+		CurrentActionMsg  = "~r~[E] ~p~Kleedkamer"
 		CurrentActionData = {}
 	elseif zone == "CasinoFridge" then
 		CurrentAction     = 'CasinoFridge'
-		CurrentActionMsg  = "~r~[E] ~p~Lodówka"
+		CurrentActionMsg  = "~r~[E] ~p~Koelkast"
 		CurrentActionData = {}
 	elseif zone == "CasinoBar" then
 		CurrentAction     = 'CasinoBar'
@@ -420,13 +420,13 @@ AddEventHandler('program-casino:openTicketMenuClient', function(worker)
 		{label = "Nie pokazuj",  value = 'notShow'}
 	}
 	if goldTicket then
-		table.insert(elements, {label = "Pokaż złoty bilet", value = 'showGolden'})
+		table.insert(elements, {label = "Laat het gouden ticket zien", value = 'showGolden'})
 	end
 	if platiniumTicket then
-		table.insert(elements, {label = "Pokaż Platynowy bilet", value = 'showPlatinium'})
+		table.insert(elements, {label = "Laat het platinum ticket zien", value = 'showPlatinium'})
 	end
 	if classicTicket then
-		table.insert(elements, {label = "Pokaż bilet", value = 'showClassic'})
+		table.insert(elements, {label = "Toon het ticket", value = 'showClassic'})
 	end
 
 	ESX.UI.Menu.CloseAll()
@@ -439,11 +439,11 @@ AddEventHandler('program-casino:openTicketMenuClient', function(worker)
 		if data.current.value == 'notShow' then
 
 		elseif data.current.value == 'showGolden' then
-			TriggerServerEvent('program-casino:sendTicket', "Klient posiada złoty bilet", worker)
+			TriggerServerEvent('program-casino:sendTicket', "De klant heeft een gouden ticket", worker)
 		elseif data.current.value == 'showPlatinium' then
-			TriggerServerEvent('program-casino:sendTicket', "Klient posiada platynowy bilet", worker)
+			TriggerServerEvent('program-casino:sendTicket', "De klant heeft een platinum ticket", worker)
 		elseif data.current.value == 'showClassic' then
-			TriggerServerEvent('program-casino:sendTicket', "Klient posiada klasyczny bilet", worker)
+			TriggerServerEvent('program-casino:sendTicket', "De klant heeft een klassiek ticket", worker)
 		end
 
 	end, function(data, menu)
@@ -459,13 +459,13 @@ end)
 function OpenCasinoActionsMenu()
 	PlayerData = ESX.GetPlayerData()
 	local elements = {
-		{label = "Popros o bilet",  value = 'ticket'}
+		{label = "Vraag een ticket",  value = 'ticket'}
 	}
 	if closeStock == true then
-		table.insert(elements, {label = "Szafa Zbrojenia", value = 'weaponArmory'})
+		table.insert(elements, {label = "Wapenkast", value = 'weaponArmory'})
 	end
 	if PlayerData.job.grade_name == 'boss' then
-	 	table.insert(elements, {label = "Akcje szefa", value = 'boss_actions'})
+	 	table.insert(elements, {label = "Manager acties", value = 'boss_actions'})
 	end
 
 
@@ -482,7 +482,7 @@ function OpenCasinoActionsMenu()
 			if closestPlayer ~= -1 and closestDistance <= 3.0 then
 				TriggerServerEvent('program-casino:openTicketMenu', GetPlayerServerId(closestPlayer), GetPlayerServerId(playerPed))
 			else
-				ESX.ShowNotification('~r~Nie ma nikogo w pobliżu')
+				ESX.ShowNotification('~r~Er is niemand in de buurt')
 			end
 		elseif data.current.value == 'boss_actions' then
 			TriggerEvent('esx_society:openBossMenu', 'casino', function (data, menu)
@@ -509,12 +509,12 @@ function OpenBarMenu()
 			title = "Drinki",
 			align = 'center',
 			elements = {
-				{label = 'JagerBomba',     value = 'jagerbomb'},
+				{label = 'JagerBomb',     value = 'jagerbomb'},
 				{label = 'Golem',         value = 'golem'},
 				{label = 'Whiskycoca',    value = 'whiskycoca'},
-				{label = 'Vodkaenergy',   value = 'vodkaenergy'},
+				{label = 'VodkaEnergy',   value = 'vodkaenergy'},
 				{label = 'Vodkafruit',    value = 'vodkafruit'},
-				{label = 'Rumfruit',     value = 'rhumfruit'},
+				{label = 'RumSinaas',     value = 'rhumfruit'},
 				{label = 'Teqpaf',        value = 'teqpaf'},
 				{label = 'Rumcoca',      value = 'rhumcoca'},
 				{label = 'Mojito',        value = 'mojito'},
@@ -551,7 +551,7 @@ function OpenGetFridgeStocksMenu()
 	  ESX.UI.Menu.Open(
 		'default', GetCurrentResourceName(), 'fridge_menu',
 		{
-		  title    = "Lodówka",
+		  title    = "Frigo",
 		  elements = elements
 		},
 		function(data, menu)
@@ -561,14 +561,14 @@ function OpenGetFridgeStocksMenu()
 		  ESX.UI.Menu.Open(
 			'dialog', GetCurrentResourceName(), 'fridge_menu_get_item_count',
 			{
-			  title = "Ilość"
+			  title = "aanal"
 			},
 			function(data2, menu2)
   
 			  local count = tonumber(data2.value)
   
 			  if count == nil then
-				ESX.ShowNotification("Zła ilość")
+				ESX.ShowNotification("Verkeerde hoeveelheid")
 			  else
 				menu2.close()
 				menu.close()
@@ -660,7 +660,7 @@ function OpenGetStocksMenu()
 	  ESX.UI.Menu.Open(
 		'default', GetCurrentResourceName(), 'stocks_menu',
 		{
-		  title    = "Szafka",
+		  title    = "Kast",
 		  elements = elements
 		},
 		function(data, menu)
@@ -677,7 +677,7 @@ function OpenGetStocksMenu()
 			  local count = tonumber(data2.value)
   
 			  if count == nil then
-				ESX.ShowNotification("Zla ilosc")
+				ESX.ShowNotification("Kast")
 			  else
 				menu2.close()
 				menu.close()
@@ -708,10 +708,10 @@ function OpenVaultMenu()
 
   
 	local elements = {
-		{label = "Weź Broń", value = 'get_weapon'},
-		{label = "Odstaw Broń", value = 'put_weapon'},
-		{label = "Weź przedmioty", value = 'get_stock'},
-		{label = "Odstaw przedmioty", value = 'put_stock'}
+		{label = "Neem wapen value = 'get_weapon'},
+		{label = "Leg wapen neer", value = 'put_weapon'},
+		{label = "Pak de items", value = 'get_stock'},
+		{label = "Leg de items apart", value = 'put_stock'}
 	}
 	  
   
@@ -720,7 +720,7 @@ function OpenVaultMenu()
 	ESX.UI.Menu.Open(
 		'default', GetCurrentResourceName(), 'vault',
 		{
-		  title    = "Krypta",
+		  title    = "Crypt",
 		  align    = 'top-left',
 		  elements = elements,
 		},
@@ -771,7 +771,7 @@ function OpenGetWeaponMenu()
 	  ESX.UI.Menu.Open(
 		'default', GetCurrentResourceName(), 'vault_get_weapon',
 		{
-		  title    = "Weź broń",
+		  title    = "Kast",
 		  align    = 'top-left',
 		  elements = elements,
 		},
@@ -813,7 +813,7 @@ function OpenPutWeaponMenu()
 	ESX.UI.Menu.Open(
 	  'default', GetCurrentResourceName(), 'vault_put_weapon',
 	  {
-		title    = "Włóż broń",
+		title    = "Kast",
 		align    = 'top-left',
 		elements = elements,
 	  },
@@ -853,7 +853,7 @@ function OpenPutStocksMenu()
 		ESX.UI.Menu.Open(
 		  'default', GetCurrentResourceName(), 'stocks_menu',
 		  {
-			title    = "Ekwipunek",
+			title    = "Uitrusting",
 			elements = elements
 		  },
 		  function(data, menu)
@@ -863,14 +863,14 @@ function OpenPutStocksMenu()
 			ESX.UI.Menu.Open(
 			  'dialog', GetCurrentResourceName(), 'stocks_menu_put_item_count',
 			  {
-				title = "Ilość"
+				title = "aantal"
 			  },
 			  function(data2, menu2)
 	
 				local count = tonumber(data2.value)
 	
 				if count == nil then
-				  ESX.ShowNotification("Zła ilość")
+				  ESX.ShowNotification("Verkeerde hoeveelheid")
 				else
 				  menu2.close()
 				  menu.close()
