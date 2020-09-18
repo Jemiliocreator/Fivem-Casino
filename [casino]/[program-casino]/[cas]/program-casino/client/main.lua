@@ -28,7 +28,7 @@ local platiniumTicket = false
 local goldTicket = false
 local classicTicket = false
 local blips = {
-	{title="Casino", colour=81, id=490, x = 930.17, y = 41.8, z = 37.3}
+	{title="State Casino", colour=81, id=490, x = 930.17, y = 41.8, z = 37.3}
 }
 
 
@@ -355,15 +355,15 @@ end
 AddEventHandler('program-casino:hasEnteredMarker', function(zone)
 	if zone =='CasinoActions' then
 		CurrentAction     = 'casino_mgmt'
-		CurrentActionMsg  = "~r~[E] ~b~Open het casinobeheermenu"
+		CurrentActionMsg  = "~r~[E] ~b~Otworz menu zarządzania kasynem"
 		CurrentActionData = {}
 	elseif zone == "CasinoCloak" then
 		CurrentAction     = 'CasinoCloak'
-		CurrentActionMsg  = "~r~[E] ~p~Casino kleedkamer"
+		CurrentActionMsg  = "~r~[E] ~p~Przebieralnia Kasyna"
 		CurrentActionData = {}
 	elseif zone == "CasinoFridge" then
 		CurrentAction     = 'CasinoFridge'
-		CurrentActionMsg  = "~r~[E] ~p~Frigo"
+		CurrentActionMsg  = "~r~[E] ~p~Lodówka"
 		CurrentActionData = {}
 	elseif zone == "CasinoBar" then
 		CurrentAction     = 'CasinoBar'

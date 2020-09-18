@@ -38,7 +38,7 @@ function OpenCasinoCloak()
 		menu.close()
 
 		CurrentAction     = 'CasinoCloak'
-		CurrentActionMsg  = "~r~[E]~p~ Casino kleedkamer"
+		CurrentActionMsg  = "~r~[E]~p~ Przebieralnia Kasyna"
 		CurrentActionData = {}
 	end)
 
